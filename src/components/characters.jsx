@@ -1,14 +1,19 @@
 import React from "react";
 
+const styles ={
+    card: {
+        backgroundColor:'rgba(60,62,68,1)',maxWidth:350,marginBottom:5,color:'fff'
+    }
+}
 
 const Characters = ({personajes}) => {
     return ( 
         <>
          <div className="row ">            
                
-                {personajes.map((x,i)=>(
+                {personajes.slice(-8).map((x,i)=>(
                     <div key={i} className="col">                      
-                           <div className="card" style={{maxWidth:350,marginBottom:5}}>
+                           <div className="card text-light" style={styles.card }>
                              <img className="card" src={x.image} alt=""  />
                              
                              <div className="card-body">    
